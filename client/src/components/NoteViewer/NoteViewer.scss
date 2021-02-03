@@ -1,0 +1,71 @@
+@import '../../scss/variables.scss';
+@import '../../scss/templates.scss';
+
+.note-viewer {
+    @extend %viewer-editor;
+
+    .heading {
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            margin: 0;
+
+            li {
+                font-size: 20px;
+                user-select: none;
+                padding: 10px;
+                color: $green;
+                cursor: pointer;
+                transition: $transition-3;
+
+                &:hover {
+                    color: $white;
+                }
+
+                &:last-child {
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+
+    .content {
+        padding: 15px;
+        flex-grow: 1;
+        color: $white;
+
+        > * {
+            margin: 10px 0;
+        }
+
+        span {
+            color: $green;
+        }
+
+        div {
+            font-weight: 500;
+            font-size: 25px;
+
+            &.note {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .info {
+        display: flex;
+        justify-content: flex-end;
+
+        div {
+            padding: 15px;
+            color: $green;
+            cursor: pointer;
+            transition: $transition-3;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

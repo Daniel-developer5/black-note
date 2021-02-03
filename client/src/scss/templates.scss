@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+%viewer-editor {
+    background-color: $gray;
+    transform-origin: right;
+    display: flex;
+    flex-direction: column;
+    color: $lightgray;
+    transform: translate(100%);
+    transition: $transition-3;
+    @extend %overlay;
+
+    &.open {
+        transform: translate(0);
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        .arrow {
+            padding: 0 15px;
+            color: $green;
+            font-size: 20px;
+            cursor: pointer;
+            transition: $transition-3;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

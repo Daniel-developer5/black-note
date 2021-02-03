@@ -1,0 +1,32 @@
+@import './scss/variables.scss';
+
+body {
+    background-color: #000;
+    overflow: hidden;
+}
+
+.App {
+    max-width: 768px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: $dark;
+    position: relative;
+    overflow: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input, button, textarea {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}

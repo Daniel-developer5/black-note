@@ -1,0 +1,45 @@
+@import '../../scss/variables.scss';
+@import '../../scss/templates.scss';
+
+footer {
+    background-color: $black;
+
+    ul {
+        padding: 0 20px;
+        display: flex;
+        list-style-type: none;
+
+        li {
+            width: 20%;
+            padding: 15px 0;
+            font-size: 18px;
+            color: $white;
+            cursor: pointer;
+            transition: $transition-3;
+            @extend %center;
+
+            &:hover {
+                color: $green;
+
+                &.plus {
+                    div {
+                        color: $dark;
+                    }
+                }
+            }
+
+            &.plus {
+                padding: 10px 0;
+
+                div {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $green;
+                    border-radius: 50%;
+                    transition: $transition-3;
+                    @extend %center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: $white;
+    font-size: 20px;
+    font-weight: 500;
+
+    .left-menu {
+        @include menu-trigger(5px);
+
+        span {
+            height: 2px;
+            background-color: $white;
+
+            &:first-child {
+                width: 20px;
+            }
+
+            &:nth-child(2) {
+                width: 15px;
+            }
+
+            &:last-child {
+                width: 10px;
+            }
+        }
+    }
+
+    .right-menu {
+        padding-left: 20px;
+        @include menu-trigger(3px);
+
+        span {
+            width: 4px;
+            height: 4px;
+            background-color: $white;
+            border-radius: 50%;
+        }
+    }
+}
